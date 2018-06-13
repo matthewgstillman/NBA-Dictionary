@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NBA Dictionary - TEAMS, CITY, COLORS, HEX COLORS AND WEBSITE</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="container">
+            <h1>NBA Teams Dictionary - Team, City, Colors, Hex Colors and Website</h1>
+            <a href="/team_city_conf">Click Here To See The Teams Organized By Team Name And Conference</a>
+            {% for team in sorted_team_city_colors_hex_website_list %}
+            <div class="list-group">
+                <a href="{{ website }}" class="list-group-item">{{ team }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
